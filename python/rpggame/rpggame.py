@@ -121,7 +121,12 @@ while True:
         print('A monster has got you... GAME OVER!')
         break
 
-    # win
+    # win 1
     if currentRoom == 'Garden' and 'Key' in inventory and 'Potion' in inventory:
+        print('You escaped the house... YOU WIN!')
+        break
+
+    # win 2
+    if currentRoom == 'Laboratory' and 'BookOfLife' in inventory and 'BeamOMat' in inventory:
         print('You escaped the house... YOU WIN!')
         break
