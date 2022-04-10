@@ -3,16 +3,22 @@ import random
 def showInstructions():
     # print a main menu and the commands
     print('''
-        Welcome to your own RPG Game
-        ============================
+============================
+Welcome to your own RPG Game
+============================
 
-        Get to the Garden with a key and a potion.
-        Avoid the monsters!
+Get to the garden with a key and a potion
 
-        Commands:
-            go [direction]
-            get [item]
-    ''')
+or
+
+get to the laboratory with the book of life and the beam-o-mat.
+
+Avoid the monster!
+
+Commands you can use:
+    go [direction]
+    get [item]
+''')
 
 def showStatus():
     # print the player's current status
