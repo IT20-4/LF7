@@ -34,18 +34,18 @@ rooms = {
         'south'     : 'Kitchen',
         'east'      : 'Dining Room',
         'west'      : 'Office',
-        'item'      : 'key'
+        'item'      : 'Key'
     },
     
     'Kitchen' : {
         'north'     : 'Hall',
-        'item'      : 'monster'
+        'item'      : 'Monster'
     },
 
     'Dining Room' : {
         'west'      : 'Hall',
         'south'     : 'Garden',
-        'item'      : 'potion'
+        'item'      : 'Potion'
     },
 
     'Garden' : {
@@ -117,11 +117,11 @@ while True:
             print('Can\'t get ' + move[1] + '!')
     
     # loss
-    if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
+    if 'item' in rooms[currentRoom] and 'Monster' in rooms[currentRoom]['item']:
         print('A monster has got you... GAME OVER!')
         break
 
     # win
-    if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
+    if currentRoom == 'Garden' and 'Key' in inventory and 'Potion' in inventory:
         print('You escaped the house... YOU WIN!')
         break
