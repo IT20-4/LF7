@@ -1,3 +1,5 @@
+import random
+
 def showInstructions():
     # print a main menu and the commands
     print('''
@@ -34,47 +36,64 @@ rooms = {
         'south'     : 'Kitchen',
         'east'      : 'Dining Room',
         'west'      : 'Office',
-        'item'      : 'Key'
+        'item'      : 'Key',
+        'enemy'     : ''
     },
     
     'Kitchen' : {
         'north'     : 'Hall',
-        'item'      : 'Monster'
+        'item'      : '',
+        'enemy'     : ''
     },
 
     'Dining Room' : {
         'west'      : 'Hall',
         'south'     : 'Garden',
-        'item'      : 'Potion'
+        'item'      : 'Potion',
+        'enemy'     : ''
     },
 
     'Garden' : {
-        'north'     : 'Dining Room'
+        'north'     : 'Dining Room',
+        'enemy'     : ''
     },
 
     # more rooms
 
     'Library' : {
         'east'      : 'Office',
-        'item'      : 'BookOfLife'
+        'item'      : 'BookOfLife',
+        'enemy'     : ''
     },
 
     'Office' : {
         'east'      : 'Hall',
         'south'     : 'Laboratory',
-        'west'      : 'Library'
+        'west'      : 'Library',
+        'enemy'     : ''
 
     },
 
     'Laboratory' : {
         'north'     : 'Office',
-        'item'      : 'Beam-O-Mat'
+        'item'      : 'Beam-O-Mat',
+        'enemy'     : ''
     }
 
 }
 
 # start the player in the Hall
 currentRoom = 'Hall'
+
+# random monster location
+locationMonster = []
+
+# in which rooms could the monster spawn?
+locationMonster = ['Kitchen', 'Dining Room', 'Garden', 'Office', 'Laboratory', 'Library']
+
+random.shuffle(locationMonster)
+locationMonster = locationMonster[0]
+rooms[locationMonster]['enemy'] = 'Monster'
 
 
 ########################################
@@ -88,6 +107,9 @@ showInstructions()
 while True:
     # show status
     showStatus()
+
+    # show where to monster spawned --> debug
+    print('The Monster is in the:', locationMonster)
 
     # get move
     move = ''
@@ -117,7 +139,7 @@ while True:
             print('Can\'t get ' + move[1] + '!')
     
     # loss
-    if 'item' in rooms[currentRoom] and 'Monster' in rooms[currentRoom]['item']:
+    if 'enemy' in rooms[currentRoom] and 'Monster' in rooms[currentRoom]['enemy']:
         print('A monster has got you... GAME OVER!')
         break
 
