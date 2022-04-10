@@ -115,7 +115,7 @@ while True:
     showStatus()
 
     # show where to monster spawned --> debug
-    print('The Monster is in the:', locationMonster)
+#    print('The Monster is in the:', locationMonster)
 
     # get move
     move = ''
