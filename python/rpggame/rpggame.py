@@ -15,6 +15,7 @@ get to the laboratory with the book of life and the beam-o-mat.
 
 Avoid the monster!
 
+
 Commands you can use:
     go [direction]
     get [item]
@@ -108,6 +109,7 @@ rooms[locationMonster]['enemy'] = 'Monster'
 
 ########################################
 
+# show instructions at start
 showInstructions()
 
 while True:
