@@ -62,7 +62,7 @@ rooms = {
 
     'Library' : {
         'east'      : 'Office',
-        'item'      : 'BookOfLife',
+        'item'      : 'Book of Life',
         'enemy'     : ''
     },
 
@@ -124,14 +124,25 @@ while True:
 
     # go
     if move[0] == 'go':
-        if move[1] in rooms[currentRoom]:
+
+        # user shouldn't only input "go"
+        if len(move) <= 1:
+            print("Something is not right here...")
+
+        # movement
+        elif move[1] in rooms[currentRoom]:
             currentRoom = rooms[currentRoom][move[1]]
         else:
             print('You can\'t go that way!')
 
     # get
     if move[0] == 'get' :
-        if 'item' in rooms[currentRoom] and move[1] in rooms[currentRoom]['item']:
+        # user shouldn't only input "get"
+        if len(move) <= 1:
+            print("Something is not right here...")
+
+        # action
+        elif 'item' in rooms[currentRoom] and move[1] in rooms[currentRoom]['item']:
             inventory += [move[1]]
             print(move[1] + ' got!')
             del rooms[currentRoom]['item']
