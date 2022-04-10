@@ -68,7 +68,7 @@ rooms = {
 
     'Laboratory' : {
         'north'     : 'Office',
-        'item'      : 'BeamOMat'
+        'item'      : 'Beam-O-Mat'
     }
 
 }
@@ -94,7 +94,7 @@ while True:
     while move == '':
         move = input('>')
 #    move = move.lower().split() # split --> items cant be nammed with upper case letters
-    move = move.split()
+    move = move.split(' ', 1) # only the first command should be split, so itemnames can have spaces
 
     # exit
     if move[0] == "exit":
@@ -127,6 +127,6 @@ while True:
         break
 
     # win 2
-    if currentRoom == 'Laboratory' and 'BookOfLife' in inventory and 'BeamOMat' in inventory:
+    if currentRoom == 'Laboratory' and 'BookOfLife' in inventory and 'Beam-O-Mat' in inventory:
         print('You escaped the house... YOU WIN!')
         break
