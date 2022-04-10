@@ -55,7 +55,8 @@ rooms = {
     # more rooms
 
     'Library' : {
-        'east'      : 'Office'
+        'east'      : 'Office',
+        'item'      : 'BookOfLife'
     },
 
     'Office' : {
@@ -66,7 +67,8 @@ rooms = {
     },
 
     'Laboratory' : {
-        'north'     : 'Office'
+        'north'     : 'Office',
+        'item'      : 'BeamOMat'
     }
 
 }
@@ -91,7 +93,8 @@ while True:
     move = ''
     while move == '':
         move = input('>')
-    move = move.lower().split()
+#    move = move.lower().split() # split --> items cant be nammed with upper case letters
+    move = move.split()
 
     # exit
     if move[0] == "exit":
