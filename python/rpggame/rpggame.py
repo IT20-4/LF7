@@ -31,25 +31,44 @@ inventory = []
 # a dictionary linking a room to other rooms
 rooms = {
     'Hall' : { 
-        'south' : 'Kitchen',
-        'east' : 'Dining Room',
-        'item' : 'key'
+        'south'     : 'Kitchen',
+        'east'      : 'Dining Room',
+        'west'      : 'Office',
+        'item'      : 'key'
     },
     
     'Kitchen' : {
-        'north' : 'Hall',
-        'item' : 'monster'
+        'north'     : 'Hall',
+        'item'      : 'monster'
     },
 
     'Dining Room' : {
-        'west' : 'Hall',
-        'south' : 'Garden',
-        'item' : 'potion'
+        'west'      : 'Hall',
+        'south'     : 'Garden',
+        'item'      : 'potion'
     },
 
     'Garden' : {
-        'north' : 'Dining Room'
+        'north'     : 'Dining Room'
+    },
+
+    # more rooms
+
+    'Library' : {
+        'east'      : 'Office'
+    },
+
+    'Office' : {
+        'east'      : 'Hall',
+        'south'     : 'Laboratory',
+        'west'      : 'Library'
+
+    },
+
+    'Laboratory' : {
+        'north'     : 'Office'
     }
+
 }
 
 # start the player in the Hall
