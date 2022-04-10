@@ -145,6 +145,7 @@ while True:
 
     # get
     if move[0] == 'get' :
+        
         # user shouldn't only input "get"
         if len(move) <= 1:
             print("Something is not right here...")
