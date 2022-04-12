@@ -182,6 +182,6 @@ while True:
         break
 
     # win 2
-    if currentRoom == 'Laboratory' and 'BookOfLife' in inventory and 'Beam-O-Mat' in inventory:
+    if currentRoom == 'Laboratory' and 'Book of Life' in inventory and 'Beam-O-Mat' in inventory:
         print('You escaped the house... YOU WIN!')
         break
