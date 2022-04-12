@@ -63,7 +63,6 @@ rooms = {
     
     'Kitchen' : {
         'north'     : 'Hall',
-        'item'      : '',
         'enemy'     : ''
     },
 
