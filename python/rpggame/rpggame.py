@@ -12,9 +12,6 @@
 #   - die schwarzen Rechtecke sollen die Türen darstellen
 #   - Secret ist nicht implementiert und sollte nur das Layout besser aussehen lassen :D
 
-
-
-
 import random
 
 def showInstructions():
