@@ -1,3 +1,20 @@
+# Das Programm gibt zu Beginn eine kurze Anleitung aus.
+# Anschließend wechselt das Programm in eine Schleife. In der Schleife wird am Anfang immer der derzeitige Spielerstatus ausgegeben (derzeitiger Raum, Inventar und Gegenstände die sich im Raum befinden).
+# Der Spieler kann sich mit dem Befehl "go" zwischen den Räumen bewegen.
+# Der Spieler kann Gegenstände mit dem "get"-Befehl aufheben.
+# Das Spiel ist verloren, wenn der Spieler auf das Monster trifft. Das Monster wird bei jedem Neustart einen zufälligen Raum zugewiesen. Diese Räume müssen/können selbst definiert werden. (locationMonster)
+# Das Spiel kann durch 2 Ereignisse gewonnen werden:
+#   - der Spieler befindet sich im Garten und hat den "Key" und die "Potion" im Inventar
+#   - der Spieler befindet sich im Laboratory und hat das "Book of Life" und den "Beam-O-Mat" im Inventar.
+# building_layout.png beschreibt den Aufbau des Gebäudes.
+#   - der blaue Punkt ist der Spawnpunkt des Spielers (currentRoom)
+#   - die roten Punkte sind die derzeit möglichen Spawnpoints des Monsters. (locationMonster)
+#   - die schwarzen Rechtecke sollen die Türen darstellen
+#   - Secret ist nicht implementiert und sollte nur das Layout besser aussehen lassen :D
+
+
+
+
 import random
 
 def showInstructions():
