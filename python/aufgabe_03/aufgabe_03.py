@@ -1,5 +1,8 @@
 Zahlen = []
 
+print('Gib nacheinander Zahlen ein, welche sortiert werden sollen.')
+print('Mit dem Befehl "sortieren" werden die Zahlen sortiert.')
+
 while True :
     x = input('>')
     if x == '' :
