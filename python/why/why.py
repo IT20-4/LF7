@@ -51,9 +51,30 @@ print('12,5')
 x = 150
 print(x>100)
 print (x<100)
+print()
 
 # Aufgabe 13
 x = 24
 y = 29
 z = 51
+
+print(x, y, z, sep=':')
+print()
+
+# Aufgabe 14
+x = 2
+y = 4
+
+print((x*x)+(y*y))
+print()
+
+# Aufgabe 15
+farbe = 'rot'
+substantiv = 'Soßen' 
+nahrungsmittel = 'Pommes'
+
+print('Tomaten sind ' + farbe)
+print(substantiv + ' sind gelb')
+print('Ich mag ' + nahrungsmittel)
+print()
 
